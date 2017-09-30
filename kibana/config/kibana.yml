@@ -1,0 +1,3 @@
+server.name: playground-kibana
+
+elasticsearch.url: http://es-master:9200

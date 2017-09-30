@@ -1,0 +1,17 @@
+version: "3.3"
+
+services:
+  es-master:
+    build: ./es-master
+    ports:
+      - 9200:9200
+
+  es-node:
+    build: ./es-node
+
+  kibana:
+    build: ./kibana
+    ports:
+      - 5601:5601
+
+

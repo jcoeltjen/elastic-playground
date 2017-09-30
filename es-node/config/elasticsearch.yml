@@ -1,0 +1,14 @@
+cluster.name: elastic-playground
+
+node.name: playground-node-${HOSTNAME}
+node.master: false
+
+network.host: 0.0.0.0
+
+discovery.zen.ping.unicast.hosts:
+  - es-master
+
+xpack.monitoring.enabled: true
+xpack.ml.enabled: false
+xpack.graph.enabled: false
+xpack.security.enabled: false
