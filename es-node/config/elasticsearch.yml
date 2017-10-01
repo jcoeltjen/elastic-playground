@@ -10,5 +10,6 @@ discovery.zen.ping.unicast.hosts:
 
 xpack.monitoring.enabled: true
 xpack.ml.enabled: false
+xpack.watcher.enabled: false
 xpack.graph.enabled: false
 xpack.security.enabled: false

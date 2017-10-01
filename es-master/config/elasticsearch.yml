@@ -2,10 +2,12 @@ cluster.name: elastic-playground
 
 node.name: playground-master
 node.master: true
+node.data: false
 
 network.host: 0.0.0.0
 
 xpack.monitoring.enabled: true
 xpack.ml.enabled: false
+xpack.watcher.enabled: false
 xpack.graph.enabled: false
 xpack.security.enabled: false
