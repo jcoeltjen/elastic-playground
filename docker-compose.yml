@@ -6,12 +6,23 @@ services:
     ports:
       - 9200:9200
 
-  es-node:
+  es-node-1:
+    build: ./es-node
+
+  es-node-2:
     build: ./es-node
 
   kibana:
     build: ./kibana
     ports:
       - 5601:5601
+
+  metricbeat:
+    build: ./metricbeat
+    volumes:
+      - /proc:/hostfs/proc:ro
+      - /sys/fs/cgroup:/hostfs/sys/fs/cgroup:ro
+      - /:/hostfs:ro
+    command: metricbeat -c metricbeat.yml -system.hostfs=/hostfs -e
 
 
